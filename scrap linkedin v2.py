@@ -125,8 +125,10 @@ for link in companies_list:
             activity = activity.find('span', {'aria-hidden':"true"}).text
             if "h" in activity or "d" in activity or "w" in activity or activity.startswith('1m'):
                 activity = "Profile is active in the last 30 days" 
+            else:
+                activity = "Profile not active in the last 30 days"
         else:
-            activity = "Profile not active"        
+            activity = "Profile not active at all"        
         time.sleep(3)
 
 
