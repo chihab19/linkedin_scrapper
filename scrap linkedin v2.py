@@ -1,17 +1,11 @@
-from optparse import Values
-import re
+
 from matplotlib.style import available
-import pandas as pd
-from jmespath import search
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-import xlsxwriter
 from openpyxl import load_workbook
-import timeit
-from selenium.webdriver.chrome.options import Options  
 from selenium.webdriver.common.keys import Keys
 
 
@@ -25,7 +19,7 @@ companies_list = ["https://www.linkedin.com/company/oxus-ai/" , "https://www.lin
 
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox("path to geckodriver")
 driver.get("https://linkedin.com/uas/login")
 
 time.sleep(1)
